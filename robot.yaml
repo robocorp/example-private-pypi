@@ -1,0 +1,12 @@
+tasks:
+  Run Python:
+    shell: python prepare.py PYPI_SECRETS "python the_real_robot.py"
+
+condaConfigFile: conda.yaml
+artifactsDir: output
+PATH:
+  - .
+PYTHONPATH:
+  - .
+ignoreFiles:
+  - .gitignore
