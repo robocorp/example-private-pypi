@@ -1,9 +1,12 @@
 tasks:
-  Run Python:
-    shell: python prepare.py PYPI_SECRETS "python the_real_robot.py"
+  Private PyPI Library Usage:
+    robotTaskName: Private PyPI Library Usage
 
 condaConfigFile: conda.yaml
+preRunScripts:
+  - private-pip-install.py private_pypi requirements-private.txt
 artifactsDir: output
+
 PATH:
   - .
 PYTHONPATH:

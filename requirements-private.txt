@@ -1,0 +1,3 @@
+--index-url=https://${PYPI_USR}:${PYPI_PWD}@devpi.robocorp.cloud/ci/dev
+
+rpaframework-google==6.0.0
