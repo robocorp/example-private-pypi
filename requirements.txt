@@ -1,5 +1,0 @@
-# You should have something like this here:
-# --extra-index-url=https://${PYPI_USERNAME}:${PYPI_PASSWORD}@my.privatepypi.com
-# private-package==1.2.3
-# ...but in this example we have this for demo purposes
-faker==13.0.0
