@@ -1,14 +1,19 @@
 tasks:
   Private PyPI Library Usage:
     robotTaskName: Private PyPI Library Usage
+  Private Repo Or Local Source Library Usage:
+    shell: python task.py
 
 condaConfigFile: conda.yaml
 preRunScripts:
+  # This script uses secrets from Control Room's Vault named "private_pypi", injects
+  #  them into the environment, then it installs the private pip requirements.
   - private-pip-install.py private_pypi requirements-private.txt
 artifactsDir: output
 
 PATH:
   - .
+  - ./bin/
 PYTHONPATH:
   - .
 ignoreFiles:
