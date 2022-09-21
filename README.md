@@ -2,7 +2,7 @@
 
 Recipe for accessing private PyPI packages with credentials in Robocorp Vault.
 
-But not limited to, as in the [requirements-private.txt](./requirements-private.txt)
+But not limited to, as in the [requirements-private.txt](https://github.com/robocorp/example-private-pypi/blob/master/requirements-private.txt)
 you'll find examples on how to install Python packages from the following:
 - Private repository using a Vault provided `github_token`.
 - Local source with a directory path accessible by the robot.
@@ -27,11 +27,11 @@ you'll find examples on how to install Python packages from the following:
 
 ## How it works
 
-1. The [conda.yaml](./conda.yaml) contains an entry called `preRunScripts` which
+1. The [robot.yaml](https://github.com/robocorp/example-private-pypi/blob/master/robot.yaml) contains an entry called `preRunScripts` which
    instructs **rcc** to execute a script like
-   [private-pip-install.py](./bin/private-pip-install.py) right before the robot run.
+   [private-pip-install.py](https://github.com/robocorp/example-private-pypi/blob/master/bin/private-pip-install.py) right before the robot run.
 2. The script receives as parameters the Vault secret store name and the path to the
-   [requirements](./requirements-private.txt) file to be installed by **pip**,
+   [requirements](https://github.com/robocorp/example-private-pypi/blob/master/requirements-private.txt) file to be installed by **pip**,
    containing private sources for the dependencies.
 3. The script injects into the env, variables used by the `pip install` which is run to
    install the private requirements.
