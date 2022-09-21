@@ -1,26 +1,26 @@
 # Using private python packages in robots
 
-Recipe for accessing private PyPI packages with credentials in Robocorp Vault.
+Recipe for using private packages securely with credentials in Robocorp Vault.
 
-But not limited to, as in the [requirements-private.txt](https://github.com/robocorp/example-private-pypi/blob/master/requirements-private.txt)
-you'll find examples of how to install Python packages from the following:
-- Private repository using a Vault provided `github_token`.
+In the example [requirements-private.txt](https://github.com/robocorp/example-private-pypi/blob/master/requirements-private.txt)
+you'll find how to install Python packages from different sources:
+- Private PyPI service.
+- Private GitHub repository.
 - Local source with a directory path accessible by the robot.
 
 ## Setup & Run
 
-1. In Control Room create a Vault secret and add the required values there:
-   - Vault secret: `private_pypi`
-     - `pypi_usr` : username for private PyPI source
-     - `pypi_pwd` : password for private PyPI source
-     - `github_token` : Access token for GitHub source<br/><br/>
-     <img src="./bin/vault.png" alt="Vault example" width="400"><br/><br/>
+1. Go to Robocorp Control Room and create a Vault secret with name: `private_pypi` and add the following keys:
+   - `pypi_usr` : username for private PyPI source
+   - `pypi_pwd` : password for private PyPI source
+   - `github_token` : Access token for GitHub source<br/><br/>
+   <img src="./bin/vault.png" alt="Vault example" width="400"><br/><br/>
 
 2. Link your VS Code Robocorp extension to Control Room so that it has access to the Vault secrets.
    * The robot executions with Workforce Agent and Assistant automatically get the secure Vault access.
 3. Run the bot with VSCode and select a task demonstrating how the private packages get installed and used.
 
-### Tasks
+## Tasks
 
 - `Private PyPI Library Usage`
   - Installs and uses a library from a private PyPI.

@@ -6,5 +6,7 @@ rpaframework-google==6.0.0
 # Installing from private GitHub repo is also possible.
 git+https://${GITHUB_TOKEN}@github.com/cmin764/python-fire.git  # @{tag}#egg={package}
 
-# Installing from private local directory in editable way. (development mode)
+# Installing from private local directory in editable way. 
+# Note: This should only be used in development, as relying on specific file and 
+# folder structures in production makes the robot brittle and hard to update.
 -e /Users/cmin/Repos/python-fire
