@@ -28,6 +28,7 @@ you'll find how to install Python packages from different sources:
 - `Private Repo Or Local Source Library Usage`
   - Installs and uses a library from either a private repository or a local source. 
   - Requires a Vault secret with the name `private_pypi` containing key: `github_token`.
+  - To choose between the sources, just comment out the lines you don't want in the requirements file.
 
 ## How it works
 
