@@ -14,7 +14,7 @@ you'll find how to install Python packages from different sources:
    - `pypi_usr` : username for private PyPI source
    - `pypi_pwd` : password for private PyPI source
    - `github_token` : Access token for GitHub source<br/><br/>
-   <img src="./bin/vault.png" alt="Vault example" width="400"><br/><br/>
+   <img src="https://github.com/robocorp/example-private-pypi/blob/master/bin/vault.png" alt="Vault example" width="400"><br/><br/>
 
 2. Link your VS Code Robocorp extension to Control Room so that it has access to the Vault secrets.
    * The robot executions with Workforce Agent and Assistant automatically get the secure Vault access.
@@ -28,6 +28,7 @@ you'll find how to install Python packages from different sources:
 - `Private Repo Or Local Source Library Usage`
   - Installs and uses a library from either a private repository or a local source. 
   - Requires a Vault secret with the name `private_pypi` containing key: `github_token`.
+  - To choose between the sources, just comment out the lines you don't want in the requirements file.
 
 ## How it works
 
