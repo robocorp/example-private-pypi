@@ -1,12 +1,12 @@
 # Here you put your private PyPI URL and the auth env vars get magically pulled from
 #  the environment. (as they were set by the pre-run script)
 --index-url=https://${PYPI_USR}:${PYPI_PWD}@devpi.robocorp.cloud/ci/dev
-rpaframework-google==6.0.0
+rpaframework-google==7.0.4a0
 
 # Installing from private GitHub repo is also possible.
 git+https://${GITHUB_TOKEN}@github.com/cmin764/python-fire.git  # @{tag}#egg={package}
 
-# Installing from private local directory in editable way. 
-# Note: This should only be used in development, as relying on specific file and 
-# folder structures in production makes the robot brittle and hard to update.
+# Installing from private local directory in editable way.
+# Note: This should only be used in development, as relying on specific file and
+#  folder structures in production makes the robot brittle and hard to maintain.
 -e /Users/cmin/Repos/python-fire
